@@ -1,0 +1,30 @@
+/* Reset de configuraciones - config base */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #1d1d1d;
+    line-height: 1.6;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#header{
+    background-color: #1d1d1d;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+#header h1 {
+    color: #ffffff;
+}

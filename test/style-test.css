@@ -1,0 +1,26 @@
+/*
+    Ejemplo de Estructura en CSS
+
+    Selector {
+        propiedad: valor;
+        propiedad2: valor2;
+    }
+*/
+
+/*  Selector Universal/Global */
+*{
+    margin: 0;
+    padding: 0;
+}
+/* Selector de Etiqueta/Tipo */
+p{
+    background-color: red;
+}
+/* Selector de Clase */
+.parrafo-test{
+    background-color: blue;
+}
+/* Selector de ID */
+#parrafo-id{
+    background-color: green;
+}

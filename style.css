@@ -20,11 +20,18 @@ body {
 
 #header{
     background-color: #1d1d1d;
-    position: fixed;
+    position: sticky;
     width: 100%;
     top: 0;
 }
 
 #header h1 {
     color: #ffffff;
+}
+
+#header .container{
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
 }

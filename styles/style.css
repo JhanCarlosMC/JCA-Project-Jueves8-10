@@ -1,0 +1,76 @@
+/*Imports*/
+@import 'header-nav.css';
+@import "section-aboutme.css";
+@import "section-project.css";
+
+/*Variables*/
+:root{
+    --color-text: #1d1d1d;
+    --color-second-heading: black;
+    --color-text-altern: #ffffff;
+    --color-text-hover: #2410ff;
+    --color-background: #f4f4f4;
+    --color-background-section: #e7e7e7;
+    --color-background-altern: #ffffff;
+
+    --font-normal: 400;
+    --font-bold: 700;
+}
+
+/* Reset de configuraciones - config base */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-container{
+   padding: 4rem 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-container:nth-child(even){
+    background-color: var(--color-background-altern);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.section-container:nth-child(odd){
+    background-color: var(--color-background-section);
+}
+
+.section-container h2{
+    font-size: 2.8rem;
+    font-weight: var(--font-bold);
+    color: var(--color-second-heading);
+    margin-bottom: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.section-container h2::before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-text-hover), var(--color-text));
+    border-radius: 2px;
+}

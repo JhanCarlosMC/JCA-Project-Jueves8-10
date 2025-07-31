@@ -1,0 +1,52 @@
+#header{
+    background-color: var(--color-text);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+#header h1 {
+    color: var(--color-text-altern);
+    font-weight: var(--font-bold);
+    font-size: 2rem;
+}
+
+#header .container{
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 20px;
+}
+
+nav{
+    display: flex;
+    gap: 2rem;
+}
+
+nav a{
+    text-decoration: none;
+    color: var(--color-text-altern);
+    transition: color 0.5s;
+    position: relative;
+}
+
+nav a:hover{ /*Peudoclase*/
+    color: var(--color-text-hover);
+}
+
+nav a::after{
+    content: "";
+    background-color: var(--color-text-hover);
+    height: 2px;
+    width: 0;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.5s;
+}
+
+nav a:hover::after{
+    width: 100%;
+}

@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+}
+
+.container {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+h1 {
+    color: #4a5568;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.game-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f7fafc;
+    border-radius: 10px;
+    border: 2px solid #e2e8f0;
+}
+
+.current-player {
+    font-weight: bold;
+    color: #4a5568;
+}
+
+#current-player {
+    color: #667eea;
+    font-size: 1.2em;
+}
+
+.score {
+    display: flex;
+    gap: 15px;
+    font-weight: bold;
+}
+
+.score span {
+    color: #4a5568;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+    margin: 20px 0;
+    background: #4a5568;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.cell {
+    aspect-ratio: 1;
+    background: white;
+    border: none;
+    font-size: 2em;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    min-height: 80px;
+}
+
+.cell:hover {
+    background: #f7fafc;
+    transform: scale(0.95);
+}
+
+.cell.x {
+    color: #e53e3e;
+    background: #fed7d7;
+}
+
+.cell.o {
+    color: #3182ce;
+    background: #bee3f8;
+}
+
+.cell.winning {
+    background: #68d391 !important;
+    color: white;
+    animation: pulse 0.6s ease-in-out;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.game-status {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 20px 0;
+    min-height: 30px;
+    color: #4a5568;
+}
+
+.game-status.winner {
+    color: #38a169;
+    animation: bounce 0.5s ease-in-out;
+}
+
+.game-status.draw {
+    color: #d69e2e;
+}
+
+@keyframes bounce {
+    0%, 20%, 60%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    80% { transform: translateY(-5px); }
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#reset-btn {
+    background: #667eea;
+    color: white;
+}
+
+#reset-btn:hover {
+    background: #5a67d8;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+#new-game-btn {
+    background: #48bb78;
+    color: white;
+}
+
+#new-game-btn:hover {
+    background: #38a169;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(72, 187, 120, 0.4);
+}
+
+@media (max-width: 480px) {
+    .container {
+        margin: 20px;
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    .cell {
+        font-size: 1.5em;
+        min-height: 60px;
+    }
+    
+    .game-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

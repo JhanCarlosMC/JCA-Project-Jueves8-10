@@ -8,6 +8,10 @@ app.get('/', (req, res) => { //Request - Response
     res.send('Hola Mundo!');
 });
 
+app.get('/test', (req, res) => { //Request - Response
+    res.send('Adios');
+});
+
 //Run del servidor
 app.listen(puerto, () => {
     console.log(chalk.green(`Servidor escuchando en http://localhost:${puerto}`));

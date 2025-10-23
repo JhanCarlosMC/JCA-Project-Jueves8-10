@@ -1,0 +1,38 @@
+.contador {
+  text-align: center;
+  padding: 30px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.contador h2 {
+  font-size: 2.5rem;
+  color: #667eea;
+  margin-bottom: 20px;
+}
+
+.botones {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.botones button {
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #667eea;
+  color: white;
+  transition: all 0.3s;
+}
+
+.botones button:hover {
+  background-color: #5568d3;
+  transform: translateY(-2px);
+}

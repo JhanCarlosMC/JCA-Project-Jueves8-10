@@ -4,7 +4,8 @@ const app = express();
 const port = 3000;
 app.use(express.json());
 
-const MONGO_URL = "mongodb+srv://jcmc_userAdmin:efp9hQv6GOAEzTpI@clusterjc2025.mjrlhdf.mongodb.net/?retryWrites=true&w=majority&appName=ClusterJC2025"
+// const MONGO_URL = "mongodb+srv://jcmc_userAdmin:efp9hQv6GOAEzTpI@clusterjc2025.mjrlhdf.mongodb.net/?retryWrites=true&w=majority&appName=ClusterJC2025"
+const MONGO_URL = "mongodb+srv://jacobogarcesoquendo:aFJzVMGN3o7fA38A@cluster0.mqwbn.mongodb.net/jhancarlosmartinezceballos"
 
 mongoose.connect(MONGO_URL)
     .then(() => console.log("MongoDB connected"))
